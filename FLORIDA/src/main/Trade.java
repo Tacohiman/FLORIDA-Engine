@@ -1,5 +1,5 @@
 package main;
-// Test comment, please ignore.
+
 public class Trade {
 	Item[] stock;
 	int[] prices;
