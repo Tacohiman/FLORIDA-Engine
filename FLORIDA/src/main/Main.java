@@ -6,7 +6,6 @@ public class Main {
 		System.out.println("This game was made with the FLORIDA engine - By Tyler Dorn");
 		try {
 			Thread.sleep(1500);
-			System.out.println("\r\b");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 			System.out.println("EVERYTHING IS OKAY, PRESS ENTER");
