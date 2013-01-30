@@ -144,7 +144,7 @@ public class Trade {
 			}
 			break;
 			case 3:
-				System.out.println("You have: " + player.getHealth() + "/" + player.getBaseHealth() + "health left.");
+				System.out.println("You have: " + player.getHealth() + "/" + player.getBaseHealth() + " health left.");
 				System.out.println("How much to heal?");
 				System.out.println("");
 				System.out.println("1. 1 Health - cost: " + healthP);
