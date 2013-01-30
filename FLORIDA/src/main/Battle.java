@@ -15,15 +15,15 @@ public class Battle {
 		monster = monst;
 	}
 	public void init(){
-		System.out.println("The Battle Begins!");
+		System.out.println("The Battle Begins!\n\n");
 		System.out.println("You see: " + monster.getName() + " it has: " + monster.getTotalHealth() + " health!");
 		if (rand.nextInt(2) == 1){
 			turnCounter = 1; // player goes first
-			System.out.println("You go first!");
+			System.out.println("You go first!\n\n");
 		}
 		else{
 			turnCounter = 0; // monster goes first
-			System.out.println("The monster goes first!");
+			System.out.println("The monster goes first!\n\n");
 		}
 		turnCounter(turnCounter);
 	}
@@ -47,11 +47,11 @@ public class Battle {
 		player.removeHealth(temp);
 		if(temp == 0){
 			System.out.println("The monster missed!");
-			System.out.println("You have: " + player.getHealth() + " health left! " + "out of: " + player.getBaseHealth() + " health");
+			System.out.println("You have: " + player.getHealth() + " / " + player.getBaseHealth() + "HP\n\n");
 		}
 		else{
 			System.out.println("Monster dealt: " + temp + " damage!");
-			System.out.println("You have: " + player.getHealth() + " health left! " + "out of: " + player.getBaseHealth() + " health");
+			System.out.println("You have: " + player.getHealth() + " / " + player.getBaseHealth() + "HP\n\n");
 			if (player.getHealth() <= 0){
 				playerDie();
 			}
@@ -60,7 +60,7 @@ public class Battle {
 	public void playerDie() {
 		playerDie = true;
 		System.out.println("The " + monster.getName() + " delivered your killing blow.");
-		System.out.println(player.getName() + " fell to the ground, and died.");
+		System.out.println(player.getName() + " died.");
 		try {
 			Thread.sleep(10000);
 			System.exit(0);
@@ -81,7 +81,7 @@ public class Battle {
 		}
 	}
 	public void playerTurn(){
-		System.out.println("You have: " + player.getHealth() + " health, and: " + player.stats.currentMana + " mana left");
+		System.out.println("You have: " + player.getHealth() + " / " + player.getBaseHealth() + "HP and: " + player.stats.currentMana + " mana left\n\n");
 		System.out.println("What do you do?");
 		System.out.println("");
 		System.out.println("1. Use Melee attack");
@@ -157,7 +157,7 @@ public class Battle {
 			monsterDie();
 		}
 		else{
-			System.out.println("The monster has: " + monster.getCurrentHealth() + " health left");
+			System.out.println("The monster has: " + monster.getCurrentHealth() +"/" + monster.getTotalHealth() + "HP\n");
 		}
 	}
 }
