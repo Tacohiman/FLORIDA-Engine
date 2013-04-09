@@ -8,7 +8,7 @@ public class Main {
 			Thread.sleep(1500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-			System.out.println("EVERYTHING IS OKAY, PRESS ENTER");
+			System.out.println("EVERYTHING IS OKAY");
 		}
 		System.out.println("Pick what level you wish to play:");
 		System.out.println("1. The No-Try Testing Forest");
